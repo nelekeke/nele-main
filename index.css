@@ -6,10 +6,13 @@ body {
 }
 header {
     background-color: #ffffff;
-    text-align: center;
-    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2em;
     height: 80px;
-    
+    text-align: left;
+    position: relative;
 }
 main {
     max-width: 800px;
@@ -35,8 +38,93 @@ main {
     margin-bottom: 1em;
 }
 .logo {
-    width: 60px;
+    width: 50px;
     border-radius: 5%;
-    margin: 0 auto;
+    margin: 0;
     display: block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: flex-end;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
+}
+
+nav a {
+    color: #2d2d7b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 0.3em 0.7em;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    font-family: Arial, sans-serif; 
+}
+
+nav a:hover,
+nav a:focus {
+    background: #2d2d7b;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 1em;
+        position: relative;
+    }
+    .logo {
+        margin: 0;
+    }
+    .menu-toggle {
+        display: block;
+        position: static;
+        margin-left: auto;
+        z-index: 30;
+    }
+    nav {
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        width: 80%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 0 0 10px 10px;
+        transform: translateY(-30px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.3s;
+        z-index: 20;
+        margin: 0;
+        display: flex;
+        visibility: hidden;
+    }
+    nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
 }
