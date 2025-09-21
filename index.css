@@ -85,6 +85,91 @@ nav a:focus {
     text-decoration: none;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.contact-form label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1f1f52;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: #2d2d7b;
+    color: #ffffff;
+    border: none;
+    padding: 0.8em 1.2em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.contact-form button:hover {
+    background-color: #1f1f52;
+}
+
+.hero {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1s ease-in-out;
+}
+
+
+.hero-text {
+    background-color: rgba(31, 31, 82, 0.6);
+    padding: 2em;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 600px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-text p {
+    font-size: 1.3em;
+}
+
+
 @media (max-width: 700px) {
     header {
         flex-direction: row;
@@ -126,5 +211,21 @@ nav a:focus {
         opacity: 1;
         pointer-events: auto;
         visibility: visible;
+    }
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-text {
+        width: 90%;
+        padding: 1em;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
     }
 }

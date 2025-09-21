@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/LOGO_N-ele-b_w.png">
+	<title>NelePC</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="helper.js" defer></script>
+</head>
+<body>
+	<header>
+        <img src="assets/LOGO_N-ele-transparent.png" class="logo" alt="main Logo">
+        <button class="menu-toggle" aria-label="Avaa valikko">&#9776;</button>
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="yritysasiakkaat.html">Yritysasiakkaat</a>
+            <a href="tietokoneet.html">Tietokoneet</a>
+            <a href="tietoa-meista.html">Tietoa meistä</a>
+            <a href="blogi.html">Blogi</a>
+			<a href="contactus.html">Ota yhteyttä</a>
+        </nav>
+    </header>
+	<main>
+        <article class="post">
+            <h2>Ota yhteyttä</h2>
+            <p>Voit lähettää meille viestin alla olevalla lomakkeella. Muista lisätä nimesi ja puhelinnumerosi, jotta voimme tarvittaessa ottaa sinuun yhteyttä.</p>
+            <form action="https://formspree.io/f/xvgwpojk" method="POST" class="contact-form">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköpostiosoitteesi:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Puhelinnumero:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" rows="8" required></textarea>
+
+            <button type="submit">Lähetä viesti</button>
+            </form>
+        </article>
+    </main>
+
+</body>
+</html>
