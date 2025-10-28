@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/LOGO_N-ele-b_w.png">
+	<title>NelePC</title>
+	<link rel="stylesheet" href="styles/consumer.css">
+    
+	<style>
+		.contact-link {
+			color: inherit;
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+			transition: color 160ms ease, transform 120ms ease;
+		}
+		.contact-link::after {
+			content: "";
+			display: block;
+			height: 2px;
+			background: rgba(255,255,255,0.85);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -3px;
+			transform-origin: left center;
+			transform: scaleX(0);
+			transition: transform 200ms cubic-bezier(.2,.8,.2,1);
+		}
+		.contact-link:hover,
+		.contact-link:focus {
+			color: #aaaaa9;
+			outline: none;
+			transform: translateY(-2px);
+		}
+		.contact-link:hover::after,
+		.contact-link:focus::after {
+			transform: scaleX(1);
+		}
+		.contact-link:focus-visible {
+			box-shadow: 0 0 0 3px rgba(255,210,77,0.12);
+		}
+	</style>
+	<script src="helpers/common.js" defer></script>
+</head>
+<body>
+	<header>
+        <img src="assets/LOGO_N-ele-transparent.png" class="logo" alt="main Logo">
+        <button class="menu-toggle" aria-label="Avaa valikko">&#9776;</button>
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="devices.html">Laitteet</a>
+            <a href="consumer.html">Kuluttajat</a>
+            <a href="aboutus.html">Tietoa meistä</a>
+            <a href="blog.html">Blogi</a>
+			<a href="contactus.html">Ota yhteyttä</a>
+        </nav>
+    </header>
+		<div class="hero">
+			<div class="hero-text">
+					<p style="font-size:1.5em; margin-bottom:0.7em;">Kuluttajille – käyttövalmiit koneet helposti</p>
+					<p>Tarjoamme laadukkaita tietokoneita ja oheislaitteita myös kuluttajille. Olitpa sitten pelaaja, opiskelija tai kotikäyttäjä, meiltä saat juuri sinulle sopivan laitteen – käyttövalmiina ja vaivattomasti.</p>
+					<h3>Uudet koneet tilauksesta</h3>
+					<ul>
+						<li>Pelitietokoneet – Tehokkaat kokoonpanot toiveidesi mukaan</li>
+						<li>Perustietokoneet ja kannettavat – Arkeen, opiskeluun tai etätyöhön</li>
+						<li>Kaikki koneet toimitetaan esiasennettuina ja käyttövalmiina</li>
+					</ul>
+					<h3>Käytetyt laitteet fiksuun hintaan</h3>
+					<ul>
+						<li>Tarkistetut ja toimintavarmat käytetyt tietokoneet, kannettavat ja oheislaitteet</li>
+						<li>Edullinen ja vastuullinen vaihtoehto – sopii moneen tarpeeseen</li>
+					</ul>
+
+					<p><a href="contactus.html" class="contact-link">Ota yhteyttä</a> – Me autamme valitsemaan juuri sinulle sopivan laitteen.<br>Rento palvelu ja reilu meininki</p>
+			</div>
+		</div>  
+</body>
+</html>
