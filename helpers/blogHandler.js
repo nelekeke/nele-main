@@ -6,7 +6,7 @@ class BlogHandler {
 
     async loadPosts() {
         try {
-            const response = await fetch('/data/blogPosts.json');
+            const response = await fetch('./data/blogPosts.json');
             const data = await response.json();
             this.posts = data.posts;
             this.displayPosts();
@@ -19,7 +19,6 @@ class BlogHandler {
     displayPosts() {
         if (!this.postsContainer) return;
 
-        // Clear container
         this.postsContainer.innerHTML = '';
 
         if (this.posts.length === 0) {
