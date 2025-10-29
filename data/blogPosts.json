@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Käytetty vai uusi tietokone?",
+      "date": "2025-10-28",
+      "author": "Nele Oy",
+      "summary": "Vertailemme käytetyn ja uuden tietokoneen hyötyjä ja haittoja",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Tietokoneen hankinta on merkittävä päätös, ja usein mietitään, kannattaako valita käytetty vai uusi laite."
+        },
+        {
+          "type": "subheading",
+          "text": "Käytetyn tietokoneen edut"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Edullisempi hinta",
+            "Ympäristöystävällinen valinta",
+            "Testattu ja toimivaksi todettu"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Uuden tietokoneen edut"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Uusin teknologia",
+            "Täysi takuu",
+            "Pidempi käyttöikä edessä"
+          ]
+        }
+      ],
+      "tags": ["tietokoneet", "vertailu", "teknologia"]
+    }
+  ]
+}
