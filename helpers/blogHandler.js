@@ -19,7 +19,6 @@ class BlogHandler {
     displayPosts() {
         if (!this.postsContainer) return;
 
-        // Clear container
         this.postsContainer.innerHTML = '';
 
         if (this.posts.length === 0) {
