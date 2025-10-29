@@ -6,7 +6,7 @@ class BlogHandler {
 
     async loadPosts() {
         try {
-            const response = await fetch('/data/blogPosts.json');
+            const response = await fetch('./data/blogPosts.json');
             const data = await response.json();
             this.posts = data.posts;
             this.displayPosts();
