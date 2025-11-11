@@ -1,8 +1,6 @@
 
 const images = [
-  '../assets/työpöytä3-1920.jpg',
-  '../assets/toimisto2-1920.jpg',
-  '../assets/läppäri2-1920.jpg'
+  '../assets/Cyberpunk-pelitietokone.jpg'
 ];
 
 let currentIndex = 0;
