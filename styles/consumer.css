@@ -134,7 +134,7 @@ nav a:focus {
 .hero {
     width: 100%;
     max-width: 100vw;
-    height: 70vh;
+    height: 85vh;
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
@@ -154,7 +154,6 @@ nav a:focus {
     border-radius: 10px;
     max-width: 90%;
     width: 600px;
-    text-align: center;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -213,7 +212,7 @@ nav a:focus {
         visibility: visible;
     }
     .hero {
-        height: 80vh;
+        height: 90vh;
     }
 
     .hero-text {
