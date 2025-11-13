@@ -1,6 +1,6 @@
 
 const images = [
-  '../assets/läppäri.jpg'
+  '../assets/job-5382501.jpg'
 ];
 
 let currentIndex = 0;

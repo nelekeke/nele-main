@@ -6,6 +6,41 @@
     <link rel="icon" type="image/png" href="/assets/LOGO_N-ele-b_w.png">
 	<title>NelePC</title>
 	<link rel="stylesheet" href="styles/devices.css">
+	<style>
+		.contact-link {
+			color: inherit;
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+			transition: color 160ms ease, transform 120ms ease;
+		}
+		.contact-link::after {
+			content: "";
+			display: block;
+			height: 2px;
+			background: rgba(255,255,255,0.85);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -3px;
+			transform-origin: left center;
+			transform: scaleX(0);
+			transition: transform 200ms cubic-bezier(.2,.8,.2,1);
+		}
+		.contact-link:hover,
+		.contact-link:focus {
+			color: #aaaaa9;
+			outline: none;
+			transform: translateY(-2px);
+		}
+		.contact-link:hover::after,
+		.contact-link:focus::after {
+			transform: scaleX(1);
+		}
+		.contact-link:focus-visible {
+			box-shadow: 0 0 0 3px rgba(255,210,77,0.12);
+		}
+	</style>
 	<script src="helpers/common.js" defer></script>
 	<script src="helpers/staticPhoto.js" defer></script>
 </head>
@@ -18,34 +53,27 @@
             <a href="devices.html">Laitteet</a>
             <a href="consumer.html">Kuluttajat</a>
             <a href="aboutus.html">Tietoa meistä</a>
-            <a href="blog.html">Blogi</a>
+            <!-- <a href="blog.html">Blogi</a> -->
 			<a href="contactus.html">Ota yhteyttä</a>
         </nav>
     </header>
 		<div class="hero">
 			<div class="hero-text">
-				<p>Tarjoamme laitteet koko organisaatiollesi ja kuljemme rinnalla hankinnasta turvalliseen kierrätykseen.</p>
-				<h3>Listaus tarjonnasta:</h3>
-				<p>Edustamme tunnettuja valmistajia kuten Dell, HP, Lenovo ja Apple. Tarjoamme laitteet kilpailukykyiseen hintaan ja hyvällä saatavuudella – aina tarpeisiisi sopivina.</p>
-				<p>Valikoimastamme löydät</p>
-				<ul>
-					<li>Pöytäkoneet ja tehotyöasemat</li>
-					<li>Kannettavat, puhelimet ja tabletit</li>
-					<li>AV-laitteet ja neuvotteluratkaisut</li>
-					<li>Oheislaitteet (näytöt, näppäimistöt, hiiret, kuulokkeet jne.)</li>
-					<li>Kamera- ja kulunvalvonta</li>
-					<li>Digitaaliset mainos- ja infonäytöt</li>
-				</ul>
-				<h3>Käyttöönotto:</h3>
-				<p>Laitteet käyttöön nopeasti – Hoidamme koko prosessin </p>
-				<p>Tarjoamme joustavat hankintatavat: ostolasku, leasing, lyhytaikainen vuokraus tai näiden yhdistelmä.</p>
-				<h3>Näin se toimii:</h3>
-				<ul>
-					<li>Valinta – Autamme löytämään juuri sinun yrityksellesi sopivat laitteet.</li>
-					<li>Esiasennus – Asennamme tarvittavat ohjelmistot valmiiksi.</li>
-					<li>Toimitus ja käyttöönotto – Laitteet toimitetaan käyttövalmiina, tarvittaessa viimeistely paikan päällä.</li>
-				</ul>
-				<p>Ota yhteyttä niin hoidetaan yhdessä kaikki yrityksesi IT-laitteet kerrasta kuntoon.</p>
+				<h3>Tarjoamme laitteet koko organisaatiollenne, alkaen hankinnasta aina turvalliseen kierrätykseen asti.</h3>
+				<h4>Edustamme tunnettuja valmistajia kuten Dell, HP, Lenovo ja Apple. Laitteet toimitetaan aina hyvällä saatavuudella ja kilpailukykyiseen hintaan, teidän tarpeidenne mukaisesti.</h4>
+				<h4>Valikoimastamme löydät</h4>
+
+				<p>Pöytäkoneet ja tehotyöasemat.</p>
+				<p>Kannettavat, puhelimet ja tabletit.</p>
+				<p>AV-laitteet ja neuvotteluratkaisut.</p>
+				<p>Oheislaitteet (näytöt, näppäimistöt, hiiret, kuulokkeet jne.).</p>
+				<p>Kamera- ja kulunvalvonta.</p>
+				<p>Digitaaliset mainos- ja infonäytöt.</p><br>
+
+
+				<h4>Hoidamme koko käyttöönoton puolestasi alusta loppuun. Autamme valitsemaan juuri teidän yrityksellenne sopivat laitteet, esiasennamme tarvittavat ohjelmistot ja asetukset, ja toimitamme laitteet käyttövalmiina suoraan paikan päälle. Tarvittaessa viimeistelemme asennuksen asiakkaan tiloissa, jotta kaikki toimii heti ilman ylimääräistä vaivaa. Käyttöönotto on nopeaa, sujuvaa ja täysin teidän tarpeisiinne räätälöityä.</h4>
+				<h4>Tarjoamme joustavat hankintatavat, jotka mukautuvat yrityksesi tilanteeseen. Laitteet voidaan hankkia ostolaskulla, leasing-sopimuksella tai rahoituksen kautta, juuri teille sopivalla tavalla. Tarjoamme aina selkeän kokonaisuuden, joka on teille järkevä, käytännöllinen ja aidosti toimiva ratkaisu.</h4>
+				<h4><a href="contactus.html" class="contact-link">Ota yhteyttä</a> niin hoidetaan yhdessä kaikki yrityksesi IT-laitteet kerrasta kuntoon.</h4>
 			</div>
 		</div>  
 	</body>

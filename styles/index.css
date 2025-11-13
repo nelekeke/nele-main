@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "League Spartan", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1f1f52;
@@ -163,10 +165,12 @@ nav a:focus {
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
+    font-weight: 800;
 }
 
 .hero-text p {
     font-size: 1.3em;
+    font-weight: 500;
 }
 
 
