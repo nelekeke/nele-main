@@ -11,7 +11,7 @@ function setStaticBackground(imagePath) {
 // Page-specific background images
 const pageBackgrounds = {
   'devices.html': '../assets/työpöytä2-1920.jpg',
-  'consumer.html': '../assets/toimisto2-1920.jpg', 
+  'consumer.html': '../assets/Cyberpunk-pelitietokone.jpg',
   'aboutus.html': '../assets/job-5382501.jpg',
   'contactus.html': '../assets/läppäri2-1920.jpg'
 };
