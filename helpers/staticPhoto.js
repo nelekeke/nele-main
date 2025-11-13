@@ -1,15 +1,30 @@
+// Static background photo setter for individual pages
+// Usage: Call setStaticBackground('path/to/image.jpg') to set a static background
 
-const images = [
-  '../assets/työpöytä2-1920.jpg'
-];
-
-let currentIndex = 0;
-const hero = document.querySelector('.hero');
-
-function changeBackground() {
-  hero.style.setProperty('--bg-image', `url(${images[currentIndex]})`);
-  currentIndex = (currentIndex + 1) % images.length;
+function setStaticBackground(imagePath) {
+  const hero = document.querySelector('.hero');
+  if (hero && imagePath) {
+    hero.style.setProperty('--bg-image', `url(${imagePath})`);
+  }
 }
 
-hero.style.setProperty('--bg-image', `url(${images[0]})`);
-setInterval(changeBackground, 5000); 
+// Page-specific background images
+const pageBackgrounds = {
+  'devices.html': '../assets/työpöytä2-1920.jpg',
+  'consumer.html': '../assets/toimisto2-1920.jpg', 
+  'aboutus.html': '../assets/job-5382501.jpg',
+  'contactus.html': '../assets/läppäri2-1920.jpg'
+};
+
+// Auto-detect current page and set appropriate background
+function initializeStaticBackground() {
+  const currentPagePath = window.location.pathname;
+  const currentPage = currentPagePath.split('/').pop() || 'index.html';
+  
+  if (pageBackgrounds[currentPage]) {
+    setStaticBackground(pageBackgrounds[currentPage]);
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeStaticBackground);
