@@ -16,24 +16,7 @@ header {
     text-align: left;
     position: relative;
 }
-main {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-    background-color: #67649662;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.post {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    color: #ffffff;
-    background-image: '..\assets\Design 2.png';
-}
-.post:last-child {
-    border-bottom: none;
-}
+
 .date {
     color: #ffffff;
     font-size: 0.9em;
@@ -153,16 +136,22 @@ nav a:focus {
 
 
 .hero-text {
-    background-color: rgba(31, 31, 82, 0.6);
+    background-color: rgba(31, 31, 82, 0.85);
     padding: 2em;
     border-radius: 10px;
     max-width: 90%;
     width: 600px;
-    text-align: center;
+    text-align: left;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+    text-align: center;
+}
 
 .hero-text h1 {
     font-size: 3em;
@@ -171,8 +160,10 @@ nav a:focus {
 }
 
 .hero-text p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 500;
+    margin-bottom: 1.5em;
+    text-align: center;
 }
 
 
@@ -231,7 +222,105 @@ nav a:focus {
         font-size: 2em;
     }
 
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+
     .hero-text p {
-        font-size: 1em;
+        font-size: 0.9em;
+    }
+
+    .contact-form {
+        gap: 0.8em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6em;
+        font-size: 0.9em;
+    }
+
+    .contact-form button {
+        padding: 0.6em 1em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 2em 0;
+    }
+    
+    .hero-text {
+        width: 95%;
+        padding: 1em 0.8em;
+        margin: 1em auto;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.6em;
+    }
+
+    .hero-text p {
+        font-size: 0.85em;
+        margin-bottom: 1em;
+    }
+
+    .contact-form {
+        gap: 0.6em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.5em;
+        font-size: 0.85em;
+    }
+
+    .contact-form textarea {
+        min-height: 120px;
+    }
+
+    .contact-form button {
+        padding: 0.5em 0.8em;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        min-height: 110vh;
+        height: auto;
+        padding: 1.5em 0 3em 0;
+        align-items: flex-start;
+    }
+    
+    .hero-text {
+        width: 96%;
+        padding: 0.8em 0.6em;
+        margin: 0.5em auto;
+    }
+
+    .hero-text h2 {
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.8em;
+        margin-bottom: 0.8em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.4em;
+        font-size: 0.8em;
+    }
+
+    .contact-form button {
+        padding: 0.4em 0.7em;
+        font-size: 0.8em;
     }
 }
