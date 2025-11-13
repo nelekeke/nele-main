@@ -7,7 +7,7 @@
 	<title>NelePC</title>
 	<link rel="stylesheet" href="styles/contactus.css">
 	<script src="helpers/common.js" defer></script>
-    <script src="helpers/staticPhotoAbo.js" defer></script>
+    <script src="helpers/staticPhotos.js" defer></script>
 </head>
 <body>
 	<header>
@@ -22,26 +22,26 @@
 			<a href="contactus.html">Ota yhteyttä</a>
         </nav>
     </header>
-	<main>
-        <article class="post">
+	<div class="hero">
+        <div class="hero-text">
             <h2>Ota yhteyttä</h2>
             <p>Voit lähettää meille viestin alla olevalla lomakkeella. Muista lisätä nimesi ja puhelinnumerosi, jotta voimme tarvittaessa ottaa sinuun yhteyttä.</p>
             <form action="https://formspree.io/f/xvgwpojk" method="POST" class="contact-form">
-            <label for="name">Nimi:</label>
-            <input type="text" id="name" name="name" required>
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Sähköpostiosoitteesi:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Sähköpostiosoitteesi:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="phone">Puhelinnumero:</label>
-            <input type="tel" id="phone" name="phone">
+                <label for="phone">Puhelinnumero:</label>
+                <input type="tel" id="phone" name="phone">
 
-            <label for="message">Viesti:</label>
-            <textarea id="message" name="message" rows="8" required></textarea>
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" rows="8" required></textarea>
 
-            <button type="submit">Lähetä viesti</button>
+                <button type="submit">Lähetä viesti</button>
             </form>
-        </article>
-    </main>
+        </div>
+    </div>
 </body>
 </html>
