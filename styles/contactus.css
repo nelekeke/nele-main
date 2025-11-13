@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "League Spartan", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1f1f52;
@@ -27,6 +29,7 @@ main {
     padding-bottom: 1em;
     margin-bottom: 1em;
     color: #ffffff;
+    background-image: '..\assets\Design 2.png';
 }
 .post:last-child {
     border-bottom: none;
@@ -121,6 +124,7 @@ nav a:focus {
     border: none;
     padding: 0.8em 1.2em;
     border-radius: 5px;
+    font-family: "League Spartan", sans-serif;
     font-size: 1em;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -163,10 +167,12 @@ nav a:focus {
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
+    font-weight: 800;
 }
 
 .hero-text p {
     font-size: 1.3em;
+    font-weight: 500;
 }
 
 
