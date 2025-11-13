@@ -290,4 +290,97 @@ nav a:focus {
         font-size: 0.88em;
     }
 }
+@media (max-width: 450px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 2em 0;
+    }
+    .hero-text {
+        width: 95%;
+        padding: 1em 0.8em;
+        margin: 1em auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.3em;
+        margin-bottom: 0.6em;
+    }
+
+    .hero-text h3 {
+        font-size: 1em;
+        margin-top: 0.8em;
+        margin-bottom: 0.5em;
+    }
+
+    .hero-text h4 {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+    }
+
+    .hero-text p {
+        font-size: 0.8em;
+        line-height: 1.3;
+        margin-bottom: 0.4em;
+    }
+
+    .hero-text ul {
+        padding-left: 1rem;
+        margin: 0.4rem 0;
+    }
+
+    .hero-text li {
+        margin: 0.2rem 0;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        min-height: 110vh;
+        height: auto;
+        padding: 1.5em 0 3em 0;
+        align-items: flex-start;
+    }
+    
+    .hero-text {
+        width: 96%;
+        padding: 0.8em 0.6em;
+        margin: 0.5em auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .hero-text h3 {
+        font-size: 0.95em;
+        margin-top: 0.6em;
+        margin-bottom: 0.4em;
+    }
+
+    .hero-text h4 {
+        font-size: 0.85em;
+        margin-top: 0.4em;
+        margin-bottom: 0.3em;
+    }
+
+    .hero-text p {
+        font-size: 0.75em;
+        line-height: 1.25;
+        margin-bottom: 0.4em;
+    }
+
+    .hero-text ul {
+        padding-left: 0.8rem;
+        margin: 0.3rem 0;
+    }
+
+    .hero-text li {
+        margin: 0.15rem 0;
+        font-size: 0.8em;
+    }
+}
 
