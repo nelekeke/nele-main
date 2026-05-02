@@ -29,7 +29,12 @@
         <div class="hero-text">
             <h2>Ota yhteyttä</h2>
             <p>Voit lähettää meille viestin alla olevalla lomakkeella. Muista lisätä nimesi ja puhelinnumerosi, jotta voimme tarvittaessa ottaa sinuun yhteyttä.</p>
-            <form action="https://formspree.io/f/xvgwpojk" method="POST" class="contact-form">
+            <form id="contact-form" class="contact-form">
+                <input type="hidden" name="access_key" value="c66bd21c-3210-490c-b928-f33a6b61670f">
+                <input type="hidden" name="subject" value="Uusi yhteydenotto – NelePC">
+                <input type="hidden" name="from_name" value="NelePC Yhteydenotto">
+                <input type="checkbox" name="botcheck" style="display:none">
+
                 <label for="name">Nimi:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -42,8 +47,9 @@
                 <label for="message">Viesti:</label>
                 <textarea id="message" name="message" rows="8" required></textarea>
 
-                <button type="submit">Lähetä viesti</button>
+                <button type="submit" id="submit-btn">Lähetä viesti</button>
             </form>
+            <div id="form-result" class="form-result" style="display:none"></div>
         </div>
     </div>
 
@@ -71,5 +77,49 @@
 			<p>© 2025 N-ele Oy – Kaikki oikeudet pidätetään</p>
 		</div>
 	</footer>
+
+	<script>
+		const form = document.getElementById('contact-form');
+		const result = document.getElementById('form-result');
+		const submitBtn = document.getElementById('submit-btn');
+
+		form.addEventListener('submit', async function(e) {
+			e.preventDefault();
+			submitBtn.disabled = true;
+			submitBtn.textContent = 'Lähetetään...';
+			result.style.display = 'none';
+			result.className = 'form-result';
+
+			const formData = new FormData(form);
+			const json = JSON.stringify(Object.fromEntries(formData));
+
+			try {
+				const response = await fetch('https://api.web3forms.com/submit', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'Accept': 'application/json'
+					},
+					body: json
+				});
+				const data = await response.json();
+				if (data.success) {
+					result.classList.add('form-result--success');
+					result.textContent = 'Viesti lähetetty! Otamme sinuun yhteyttä pian.';
+					form.reset();
+				} else {
+					result.classList.add('form-result--error');
+					result.textContent = 'Jokin meni pieleen. Yritä uudelleen tai ota yhteyttä sähköpostilla: info@nelepc.com';
+				}
+			} catch (error) {
+				result.classList.add('form-result--error');
+				result.textContent = 'Verkkovirhe. Tarkista yhteytesi ja yritä uudelleen.';
+			}
+
+			result.style.display = 'block';
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Lähetä viesti';
+		});
+	</script>
 </body>
 </html>
