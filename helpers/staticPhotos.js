@@ -13,7 +13,8 @@ const pageBackgrounds = {
   'devices.html': '../assets/työpöytä2-1920.jpg',
   'consumer.html': '../assets/Cyberpunk-pelitietokone.jpg',
   'aboutus.html': '../assets/job-5382501.jpg',
-  'contactus.html': '../assets/läppäri2-1920.jpg'
+  'contactus.html': '../assets/läppäri2-1920.jpg',
+  'softwaredevelopment.html': '../assets/notebook-2386034.jpg'
 };
 
 // Auto-detect current page and set appropriate background
